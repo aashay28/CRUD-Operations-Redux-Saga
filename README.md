@@ -6,6 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install `
+
+npm i --save a
+xios react-redux redux redux-saga redux-logger react-toastify mdb-react-ui-kit react-router-dom
+
 ### `npm start`
 
 Runs the app in the development mode.\

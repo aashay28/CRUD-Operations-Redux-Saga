@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aashay",
+      "email": "aashay@gmail.com",
+      "phone": "8140580781",
+      "address": "India"
+    },
+    {
+      "id": 2,
+      "name": "Nimesh",
+      "email": "Nimesh@gmail.com",
+      "phone": 8888888888,
+      "address": "India"
+    },
+    {
+      "name": "aashay",
+      "email": "ahs@narola.email",
+      "phone": "52528899",
+      "address": "USA",
+      "id": 4
+    }
+  ]
+}
