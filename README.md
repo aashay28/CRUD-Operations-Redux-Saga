@@ -11,6 +11,9 @@ In the project directory, you can run:
 npm i --save a
 xios react-redux redux redux-saga redux-logger react-toastify mdb-react-ui-kit react-router-dom
 
+<div align="center">
+    <img src="/ScreenShots/Home.png" width="400px"></img> 
+</div>
 ### `npm start`
 
 Runs the app in the development mode.\
