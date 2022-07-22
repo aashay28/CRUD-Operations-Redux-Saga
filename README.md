@@ -26,7 +26,7 @@
 <p align="left">
 <a href="https://twitter.com/aashayshah28" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="aashayshah28" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/aashay28" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="aashay28" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/aashay-shah" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="aashay-shah" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/19407300/aashay-shah" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="aashay-shah" height="30" width="40" /></a>
 <a href="https://instagram.com/_s.aashay_" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_s.aashay_" height="30" width="40" /></a>
 </p>
 
