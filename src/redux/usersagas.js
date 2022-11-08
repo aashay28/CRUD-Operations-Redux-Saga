@@ -17,12 +17,15 @@ import {
   deleteUsersError,
   updateUsersSuccess,
   updateUsersError,
+  searchUsersSuccess,
+  searchUsersError,
 } from "./actions";
 import {
   createUserApi,
   deleteUserApi,
   loadUsersApi,
   updateUserApi,
+  searchUsersApi,
 } from "./api";
 
 function* onLoadUsersStartAsync() {
@@ -68,10 +71,22 @@ function* onUpdateUserStartAsync({ payload: { id, formValue } }) {
     yield put(updateUsersError(error));
   }
 }
+function* onSearchUsersStartAsync(users) {
+  try {
+    const response = yield call(searchUsersApi, users.payload);
+
+    if (response.status === 200) {
+      yield put(searchUsersSuccess(response.data));
+    }
+  } catch (error) {
+    yield put(searchUsersError(error));
+  }
+}
 
 function* onLoadUsers() {
   yield takeEvery(types.LOAD_USERS_START, onLoadUsersStartAsync);
 }
+
 function* onCreateUser() {
   yield takeLatest(types.CREATE_USER_START, onCreateUserStartAsync);
 }
@@ -85,12 +100,16 @@ function* onDeleteUser() {
     yield call(onDeleteUserStartAsync, payload);
   }
 }
+function* onSearchUsers() {
+  yield takeEvery(types.SEARCH_USER_START, onSearchUsersStartAsync);
+}
 
 const userSagas = [
   fork(onLoadUsers),
   fork(onCreateUser),
   fork(onDeleteUser),
   fork(onUpdateUser),
+  fork(onSearchUsers),
 ];
 export default function* rootSaga() {
   yield all([...userSagas]);

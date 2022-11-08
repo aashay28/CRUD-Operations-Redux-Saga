@@ -13,7 +13,11 @@ const usersReducer = (state = initialState, action) => {
     case types.UPDATE_USER_START:
       return { ...state, loading: true };
 
+    case types.SEARCH_USER_START:
+      return { ...state, loading: false };
+
     case types.LOAD_USERS_SUCCESS:
+    case types.SEARCH_USER_SUCCESS:
       return { ...state, loading: false, users: action.payload };
 
     case types.CREATE_USER_SUCCESS:
@@ -27,10 +31,19 @@ const usersReducer = (state = initialState, action) => {
         users: state.users.filter((item) => item.id !== action.payload),
       };
 
+    // case types.SEARCH_USER_SUCCESS:
+    //   console.log("state", state);
+    //   return {
+    //     ...state,
+    //     loading: false,
+    //     users: state.users.filter((item) => item.name === action.payload),
+    //   };
+
     case types.LOAD_USERS_ERROR:
     case types.CREATE_USER_ERROR:
     case types.DELETE_USER_ERROR:
     case types.UPDATE_USER_ERROR:
+    case types.SEARCH_USER_ERROR:
       return { ...state, loading: false, error: action.payload };
     default:
       return state;

@@ -48,3 +48,16 @@ export const updateUsersError = (error) => ({
   type: types.UPDATE_USER_ERROR,
   payload: error,
 });
+
+export const searchUsersStart = (users) => ({
+  type: types.SEARCH_USER_START,
+  payload: users,
+});
+export const searchUsersSuccess = (users) => ({
+  type: types.SEARCH_USER_SUCCESS,
+  payload: users,
+});
+export const searchUsersError = (error) => ({
+  type: types.SEARCH_USER_ERROR,
+  payload: error,
+});

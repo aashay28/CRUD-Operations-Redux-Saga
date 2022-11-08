@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteUsersStart, loadUsersStart } from "../redux/actions";
+import {
+  deleteUsersStart,
+  loadUsersStart,
+  searchUsersStart,
+} from "../redux/actions";
 import {
   MDBTable,
   MDBTableHead,
@@ -9,16 +13,17 @@ import {
   MDBIcon,
   MDBTooltip,
   MDBSpinner,
+  MDBInput,
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 const Home = () => {
   const dispatch = useDispatch();
   const { users, loading, error } = useSelector((state) => state.data);
+
   useEffect(() => {
     dispatch(loadUsersStart());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     toast.error(error);
   }, [error]);
@@ -31,11 +36,26 @@ const Home = () => {
   }
   const handleDelete = (id) => {
     dispatch(deleteUsersStart(id));
+
     toast("User Deleted Successfully");
     dispatch(loadUsersStart());
   };
+
+  const searchHandler = (e) => {
+    dispatch(searchUsersStart(e.target.value));
+  };
+
   return (
     <div className='container' style={{ marginTop: "150px" }}>
+      <MDBInput
+        name='search'
+        type='text'
+        onChange={(e) => searchHandler(e)}
+        required
+        label='search'
+      />
+
+      <br />
       <MDBTable>
         <MDBTableHead dark>
           <tr>
